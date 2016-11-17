@@ -1,0 +1,54 @@
+input[name='status'] {
+  display: none;
+}
+.todo-panel {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+
+  .todo-entry {
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    display: inline-flex;
+
+    .delete {
+      position: absolute;
+      right: 100px;
+      opacity: 0.2;
+      top: 0;
+    }
+
+    &:before {
+      content: '\2713';
+      opacity: 0.1;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border: 1px solid #333333;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 16px;
+      font-size: 12px;
+    }
+    &:hover {
+      &:before, .delete {
+        opacity: 1;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+input[name='status']:checked {
+  & + .todo-entry::before {
+    opacity: 1;
+  }
+  & + .todo-entry p {
+    text-decoration: line-through;
+  }
+}

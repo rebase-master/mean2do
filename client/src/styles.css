@@ -1,0 +1,31 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    background-color: #008b8b;
+    margin-bottom: 20px;
+}
+#header h1{
+    border-bottom: 2px solid #eee;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#todolistContainer{
+    margin: 20px;
+}
+
+
+#todoList {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 50px 30px;
+    width: 60%;
+}
